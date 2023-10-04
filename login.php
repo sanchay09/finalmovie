@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     $servername = "try-main-db-1";
-    $username = "root";
+    $username = "php_docker";
     $password = "1234";
     $database = "ticketflickdb";
 

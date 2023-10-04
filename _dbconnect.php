@@ -1,6 +1,6 @@
 <?php
 $server = "try-main-db-1";
-$username = "root";
+$username = "php_docker";
 $password = "1234";
 $database = "ticketflickdb";
 

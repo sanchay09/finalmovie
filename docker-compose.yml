@@ -15,7 +15,8 @@ services:
       MYSQL_USER: "php_docker"
       MYSQL_PASSWORD: "1234"
     volumes:
-      - "./database/ticketflickdb.sql:/docker-entrypoint-initdb.d/ticketflickdb.sql"
+    - "./database/ticketflickdb.sql:/docker-entrypoint-initdb.d/ticketflickdb.sql"
+
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
