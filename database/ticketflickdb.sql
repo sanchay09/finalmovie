@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2023 at 06:52 AM
+-- Generation Time: Oct 08, 2023 at 01:46 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -103,7 +103,7 @@ CREATE TABLE `theatres1` (
   `t_address` varchar(255) NOT NULL,
   `city_id` int(255) NOT NULL,
   `movie_id` int(255) NOT NULL,
-  `time` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
+  `time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -111,7 +111,10 @@ CREATE TABLE `theatres1` (
 --
 
 INSERT INTO `theatres1` (`t_id`, `t_type`, `t_name`, `t_address`, `city_id`, `movie_id`, `time`) VALUES
-(1, 'PVR:4DX', 'Orion Mall', 'Dr. Ralkumar Road', 1, 2, '0000-00-00 00:00:00.000000');
+(1, 'PVR:4DX', 'Orion Mall', 'Dr. Rajkumar Road', 1, 1, '2023-01-10 13:54:59'),
+(2, 'INOX', 'Galleria Mall', 'Yelahanka', 1, 1, '2023-01-10 13:56:38'),
+(3, 'PVR:4DX', 'Nexus (Forum Mall)', 'Koramangala', 1, 1, '2023-10-01 14:17:05'),
+(4, 'PVR:4DX', 'Vegacity', 'Bannergatta', 1, 1, '2023-10-01 14:17:35');
 
 -- --------------------------------------------------------
 
@@ -136,7 +139,9 @@ INSERT INTO `userdetails1` (`sno`, `username`, `email`, `phoneno`, `password`, `
 (1, 'sanc', 'sanc@gmail.com', 2147483647, '1234567890', '0000-00-00'),
 (2, 'sanchay', 'sanchayagrawal11@gmail.com', 2147483647, '1234567890', '0000-00-00'),
 (3, 'samrith', 's@gmail.com', 2147483647, '$2y$10$DvVUt2hl/NwQDrKAomY3XugnKcIkcBOgbr.35VNeZeP7MDU3lagFq', '2023-08-01'),
-(4, '1234', 'sanchay@gmail.com', 2147483647, '$2y$10$LMo6cDiNiOsIkpd/QL8O7ucJPbV/RBhEsIy1lahM76gGmh.zO5yJK', '2023-08-31');
+(4, '1234', 'sanchay@gmail.com', 2147483647, '$2y$10$LMo6cDiNiOsIkpd/QL8O7ucJPbV/RBhEsIy1lahM76gGmh.zO5yJK', '2023-08-31'),
+(5, 'mojo', 'm@gmail.com', 2147483647, '$2y$10$sZo8u1BWJMpVKC.Ko.RNrevS9HxS.6VdMVWgPitAs8/PIa37Buvgi', '2023-09-05'),
+(6, 'sanchayagrawal0', 'sanchay@123', 1234567890, '$2y$10$jC/fp5G/cvk0krapp7AxSelvXShGG4jprAiEi.CCB/BO.wR8X0GjC', '2023-10-08');
 
 --
 -- Indexes for dumped tables
@@ -180,7 +185,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `userdetails1`
 --
 ALTER TABLE `userdetails1`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

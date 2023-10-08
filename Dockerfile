@@ -12,3 +12,6 @@ COPY . /var/www/html/
 
 # Expose port 80 for Apache
 EXPOSE 80
+
+# Set the working directory
+WORKDIR /var/www/html/

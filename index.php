@@ -22,8 +22,6 @@
     opacity: 0.9;
     width: 100%;
     height: 600px;
-    
-
 }
 
 .moviescontainer1{
@@ -58,26 +56,29 @@
     background-color: black;
     justify-content: center;
     align-items: center;
-   
  }
+
  .secondfirst{
     display: flex;
  }
+
  #titleSecond{
     display: flex;
     font-size: 35px;
     padding:15px 20px;
     margin-left: 50px;
-
 }
+
 #titleSecond img{
     width: 70px;
     height: 60px;
 }
+
 #titleSecond div{
     font-size: 2.3rem;
     color:white;
 }
+
 .text{
     padding: 15px 100px 39px 44px;
     font-size: 2.3rem;
@@ -87,13 +88,16 @@
     border-radius: 3px solid red;
     margin-top: 8px;
 }
+
 .head{
     display: flex;
     flex-direction: column;
 }
+
 .selectcities{
     margin-top: 5px;
 }
+
 .selectcitiesbut{
      width: 350px;
      height: 60px;
@@ -113,7 +117,6 @@
 
 </head>
 <body>
-
 
 <div class="firstpart">
 

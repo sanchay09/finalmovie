@@ -6,7 +6,8 @@ $showError=false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
-    $servername = "try-main-db-1";
+    $servername = "db-1";
+    //$servername = "172.17.0.2"; // Replace with the actual IP address
     $username = "php_docker";
     $password = "1234";
     $database = "ticketflickdb";
