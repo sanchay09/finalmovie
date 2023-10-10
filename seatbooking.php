@@ -229,10 +229,7 @@
 
         }
 
-
-
         .seats label {
-
             position: relative;
             width: 35px;
             height: 25px;
@@ -915,7 +912,7 @@
         
 
         $sql="SELECT * FROM `theatres1` Where  `t_id`='$tiid' and `city_id`='$cid' and `movie_id`='$mid'";
-        $result=mysqli_query($conn,$sql);
+        $result=mysqli_query($con,$sql);
         while($row=mysqli_fetch_assoc($result)){
         $tid=$row['t_id'];
         echo'<a href="payment2.php?tid='.$tid.'&movieid='.$mid.'&cityid='.$cid.'" target="_blank" class="seatbookinglist"></a>';

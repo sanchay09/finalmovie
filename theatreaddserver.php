@@ -1,5 +1,5 @@
 <?php
-include '_dbconnect.php';
+include 'db.php';
 if(isset($_POST["submit"])){
   $name = $_POST["name"];
   $actor = $_POST["actor"];

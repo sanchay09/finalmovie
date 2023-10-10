@@ -1,5 +1,5 @@
 <?php
-include '_dbconnect.php';
+include 'db.php';
 if(isset($_POST["submit"])){
   $name = $_POST["name"];
   $actor = $_POST["actor"];
@@ -42,7 +42,7 @@ if(isset($_POST["submit"])){
       $sql = "INSERT INTO movies (`movie_name`,`movie_img`,`movie_hero`,`movie_heroin`,`movie_director`,`city_id`,`time`)
        VALUES( '$name', '$newImageName','$actor','$actress','$dir','0',current_timestamp())";
        
-      $result=mysqli_query($conn, $sql);
+      $result=mysqli_query($con, $sql);
       if($result){
       echo
       "

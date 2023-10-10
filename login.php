@@ -5,17 +5,16 @@ $login=false;
 $showError=false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-
-    $servername = "db-1";
+    $dbHost = "try-main-db-1";
     //$servername = "172.17.0.2"; // Replace with the actual IP address
-    $username = "php_docker";
-    $password = "1234";
-    $database = "ticketflickdb";
+    $dbUser = "php_docker";
+    $dbPassword = "1234";
+    $dbName = "ticketflickdb";
 
     // Create a connection
-    $conn = mysqli_connect($servername, $username, $password, $database);
+    $con = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
     // Die if connection was not successful
-    if (!$conn){
+    if (!$con){
         die("Sorry we failed to connect: ". mysqli_connect_error());
     }
 
@@ -24,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        
      
    $sql = "Select * from userdetails1 where username='$usernamelog'";
-   $result = mysqli_query($conn, $sql);
+   $result = mysqli_query($con, $sql);
    $num = mysqli_num_rows($result);
     
 
@@ -44,23 +43,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-
-
-   
-
 } 
 else{
     $showError = "Sorry Cant Find your Account.Please Sign up";
 }
-
-
-
-
    }
-
-
-
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,12 +67,8 @@ else{
 
 
 body{
- 
-
   background-image: url(images/logincover.jpg);
   background-repeat: no-repeat;
-
-
 }
 
 .navigationofmovies{
@@ -94,96 +81,83 @@ body{
            padding :5px 6px;
       
        justify-content: space-between;
-       opacity:0.8;
-       
-       
-       
-       
+       opacity:0.8;   
     }
     
-    #title1{
-    
+#title1{
     display: flex;
     font-size: 34px;
     padding :27px 0px;
-    color: white;
+    color: white;  
+}
 
-    
-    }
-
-    #title1 img{
+#title1 img{
     width: 50px;
     height: 50px;
 }
 
-#content1 p{
-         
-         font-size:2.0rem;
-         color: white;
+#content1 p{      
+    font-size:2.0rem;
+    color: white;
   }
 
-  .logincontainer{
-     display: flex;
-     flex-direction:column;
-     justify-content: center;
-     align-items:center;
-     margin-top:80px;
+.logincontainer{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    margin-top:80px;
   }
 
 
-  input[type=text] {
-  width: 450px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+input[type=text] {
+    width: 450px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
 }
 
 input[type=password] {
-  width: 450px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
+    width: 450px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 button[type="submit"] {
     width: 450px;
-  background: #ffb37b;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 18px;
-  font-size: 20px;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-top: 20px;
-  color:  black;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  margin-bottom: 30px;
+    background: #ffb37b;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    color:  black;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
 }
 
-
-
-
-
-  label{
+label{
    color: #ffb37b;
    font-weight:bold;
    font-size: 1.5rem;
 }
- .text-center{
-        color:#ffb37b;
- }
 
+.text-center{
+    color:#ffb37b;
+ }
 
 </style>
 
 
 
-  <body>
+<body>
     
 <nav class="navigationofmovies">
         <div id="content1"><p>Login</p></div>
@@ -216,8 +190,6 @@ button[type="submit"] {
     ?>
 
 
-
-
     <div class="logincontainer">
     
     <h1 class="text-center">Login Here</h1> 
@@ -229,36 +201,17 @@ button[type="submit"] {
         <input type="text" class="form-control" id="username"
             name="username" aria-describedby="emailHelp"  required>    
         </div>
-
-
-        
-      
     
         <div class="form-group"> 
             <label for="password">Password</label>
             <br> 
             <input type="password" class="form-control"
             id="password" name="password"  required> 
-        </div>
-        
-    
-    
-          
+        </div> 
         <button type="submit" class="btn btn-primary">
         Login
         </button> 
     </form> 
 </div>
-
-
-
-
-
-
-
-
-
-
-    
 </body>
 </html>

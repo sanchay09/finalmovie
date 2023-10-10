@@ -1,5 +1,5 @@
 <?php
-include '_dbconnect.php';
+include 'db.php';
 if(isset($_POST["submit"])){
   $name = $_POST["name"];
   if($_FILES["image"]["error"] == 4){
@@ -38,7 +38,7 @@ if(isset($_POST["submit"])){
       move_uploaded_file($tmpName, 'img/' . $newImageName);
       $sql = "INSERT INTO cities VALUES('', '$name', '$newImageName')";
        
-      $result=mysqli_query($conn, $sql);
+      $result=mysqli_query($con, $sql);
       if($result){
       echo
       "
@@ -51,6 +51,7 @@ if(isset($_POST["submit"])){
     }
   }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

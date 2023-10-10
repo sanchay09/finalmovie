@@ -54,21 +54,16 @@ body{
             margin-top: 20px;
  }
 
-
  .payment{
       border-radius: 9px;
       width: 1000px;
-    
-      margin-right: 40px;
-
-      
-       
+      margin-right: 40px;   
  }
 
  .bill{
     border-radius: 9px;
-      width: 300px;
-      border-radius: 5px;
+    width: 300px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -96,17 +91,12 @@ body{
 }
 .bill1{
     width:300px;
-   
-   
     background: url(images/billimage.jpg);
     background-repeat: no-repeat;
     background-size: 300px;
- 
-    
     opacity: 0.95;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-   
 }
  
  .small{
@@ -115,13 +105,12 @@ body{
     padding-bottom: 13px;
     color: #814b24;
  }
+
  .seats{
-    
     font-size: 15px;
     font-style: inherit;
     padding-bottom: 13px;
     color: #814b24;
-
  }
 
  .medium{
@@ -131,24 +120,25 @@ body{
 
  .amount{
     background-color: #fffcdc;
-    
     padding-top: 10px;
     padding-bottom: 5px;
  }
+
  .amountsmall{
     font-size: 15px;
     color: #666;
     font-style: inherit;
     padding-top: 8px;
  }
+
  .amountlarge{
     font-size:25px;
  }
 
  #paybut{
-     width: 230px;
-     height: 40px;
-     background-color: rgb(248, 68, 100);
+    width: 230px;
+    height: 40px;
+    background-color: rgb(248, 68, 100);
     border-radius: 10px;
     border: rgb(248, 68, 100);
 }
@@ -163,13 +153,11 @@ body{
     flex-direction: column;
     background-color:black;
     opacity: 0.9;
-
 }
 
 .paymentoption{
     display: flex;
-    
-   padding-top: 10px;
+    padding-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
     margin-top: 10px;
@@ -181,16 +169,14 @@ body{
 .optionbut{
     width: 300px;
     height: 59px;
-    font-size: 1.5rem;
-    
-    
+    font-size: 1.5rem;   
 }
+
 .optionbut:hover{
-    background-color:  #24a0ed;
+    background-color: #24a0ed;
     border: #24a0ed;
     border-radius: 6px;
 }
-
 
 .optionbut1{
     width: 300px;
@@ -198,9 +184,9 @@ body{
     font-size: 1.5rem;
     background-color:  #24a0ed;
     border: #24a0ed;
-    border-radius: 6px;
-      
+    border-radius: 6px;   
 }
+
 input[type=text] {
   width: 600px;
   padding: 12px 20px;
@@ -217,17 +203,13 @@ input[type=number] {
 
 .paymentdetails{
     margin-top: 10px;
-    margin-left: 10px;
-      
-    
+    margin-left: 10px; 
 }
+
 .paymentdetails p{
     font-size: 1.2rem;
     color:white;
-
 }
-
-
 
 input[type=date] {
   width: 400px;
@@ -235,13 +217,14 @@ input[type=date] {
   margin: 8px 0;
   box-sizing: border-box;
 }
+
 input[type=password] {
   width: 350px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-
 }
+
 .paymentbutton{
     margin-top: 20px;
     align-self: center;
@@ -250,34 +233,24 @@ input[type=password] {
     background-color: rgb(176, 200, 201);
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
-  
 }
+
 .confirmpay{
     width: 900px;
     height: 40px;
     font-size: 1.5rem;
     background-color:  #24a0ed;
     border: #24a0ed;
-    border-radius: 12px;
-  
-    
+    border-radius: 12px;  
 }
 
 .confirmpay:hover{
-    
     background-color: rgb(248, 68, 100);
     border:  rgb(248, 68, 100);
     border-radius: 12px;
-  
-    
 }
 
-
-
-
  </style>
-
-
 
 </head>
 <body>

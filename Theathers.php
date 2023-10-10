@@ -231,11 +231,11 @@
    <div class="moviecontainer1">
     
     <?php
-      include '_dbconnect.php';
+      include 'db.php';
       $cid=$_GET['cityid'];
       $mid=$_GET['movieid'];
       $sql="SELECT * FROM `movies` Where `city_id`='$cid' and `movie_id`='$mid'";
-      $result=mysqli_query($conn,$sql);
+      $result=mysqli_query($con,$sql);
       while($row=mysqli_fetch_assoc($result)){
       $movieid=$row['movie_id'];
       $moviename=$row['movie_name'];
@@ -303,11 +303,11 @@
     <div class="theartercontainer">
    <?php
         
-        include '_dbconnect.php';
+        include 'db.php';
         $cid=$_GET['cityid'];
         $mid=$_GET['movieid'];
         $sql="SELECT * FROM `theatres1` Where `city_id`='$cid' and `movie_id`='$mid'";
-        $result=mysqli_query($conn,$sql);
+        $result=mysqli_query($con,$sql);
         while($row=mysqli_fetch_assoc($result)){
         $tid=$row['t_id'];
         $ttype=$row['t_type'];

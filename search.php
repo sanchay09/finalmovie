@@ -17,7 +17,7 @@
 
 $query=$_GET["search"];
 $sql="SELECT * FROM `movies` where match(movie_name) against('$query')";
-$result=mysqli_query($conn,$sql);
+$result=mysqli_query($con,$sql);
 if($result){
 while($row=mysqli_fetch_assoc($result)){
    $title=$row['movie_name'];

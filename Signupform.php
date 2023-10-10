@@ -11,15 +11,15 @@
        $cpass=$_POST['cpassword'];
        $mobno=$_POST['mobno'];  
         $exists=false;
-       $servername = "try-main-db-1";
-       $username = "root";
-       $password = "1234";
-       $database = "ticketflickdb";
+       $dbHost = "try-main-db-1";
+       $dbUser = "root";
+       $dbPassword = "1234";
+       $dbName = "ticketflickdb";
  
        // Create a connection
-       $conn = mysqli_connect($servername, $username, $password, $database);
+       $con = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
        // Die if connection was not successful
-       if (!$conn){
+       if (!$con){
            die("Sorry we failed to connect: ". mysqli_connect_error());
        }
        else{ 
@@ -27,7 +27,7 @@
         //  Sql query to be executed 
                   
         $existSql="SELECT * FROM `userdetails1` WHERE username='$usernamelogin'";
-        $result = mysqli_query($conn, $existSql); 
+        $result = mysqli_query($con, $existSql); 
         $numExistRows=mysqli_num_rows($result);
         
          if($numExistRows>0){
@@ -43,7 +43,7 @@
             $hash=password_hash($pass,PASSWORD_DEFAULT);
             $sql="INSERT INTO `userdetails1` (`username`, `email`,`phoneno`, `password`, `date`) VALUES 
             ('$usernamelogin', '$email', '$mobno', '$hash', current_timestamp())";
-            $result = mysqli_query($conn, $sql);
+            $result = mysqli_query($con, $sql);
   
             if ($result){
             $showAlert = true;

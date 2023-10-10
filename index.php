@@ -12,6 +12,7 @@
     
     height: 600px;
 }
+
 .firstpart::before{
     content: "";
     position: absolute;

@@ -125,15 +125,6 @@ body{
                 text-align: center;
  }
 
-
-
-
-
-
-
-
-
-
 .timing_select_button{
                 background-color:#fff;
                 color:#2dc492;
@@ -193,14 +184,6 @@ body{
   }
 
 </style>
-
-
-
-
-
-
-
-
 
 
 

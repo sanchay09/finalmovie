@@ -9,12 +9,6 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 ?>
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,17 +42,13 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     color: white;
     margin-top:40px;
     margin-left:10px;
-
-  
-
-    
     }
 
-    #title1 img{
+#title1 img{
     width: 50px;
     height: 45px;
-   
 }
+
      .moviescontainer1{
         display: flex;
         flex-direction:column;
@@ -195,10 +185,10 @@ font-size:1.8rem;
 
 <div class="moviescontainer1">
 <?php
-include '_dbconnect.php';
+include 'db.php';
 $id=$_GET['cityid'];
 $sql="SELECT * FROM `movies` Where `city_id`='$id'";
-$result=mysqli_query($conn,$sql);
+$result=mysqli_query($con,$sql);
 while($row=mysqli_fetch_assoc($result)){
   $movieid=$row['movie_id'];
 $moviename=$row['movie_name'];
