@@ -69,7 +69,6 @@ body{
   background-image: url(images/logincover.jpg);
   background-repeat: no-repeat;
 }
-
 .navigationofmovies{
     display: flex;
     width: 100%;
