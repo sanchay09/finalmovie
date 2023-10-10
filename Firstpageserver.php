@@ -167,24 +167,11 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 
 </style>
-
-
-
-
-
-
-
 </head>
 <body>
 
 
-
-
-
-
 <div class="firstpart">
-
-    
 <nav id="navbar1">
     
     <div id="title">
@@ -199,10 +186,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         
     <div class="space">
 
-     
-
     </div>
-
 
         <div id="detail">
         <p><?php  echo $_SESSION['username']?></p>
@@ -225,17 +209,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         <li class="item"> <a href="#">Contact Us</a></li>
     </u1>
     
-    
-        
     </nav>
-
-
-   
-
-
-
-   
-
 
     <div class="trendingmovies">
 
